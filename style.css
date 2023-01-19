@@ -4,33 +4,30 @@
         --line-border-fill: #3498db;
         --lineborder-empty: #383838;
 }
-* {
+*{
         box-sizing: border-box;
-      }
-      
-      body {
+}
+body{
         background-color: #1f1f1f;
-        font-family: 'Muli', sans-serif;
+        font-family: 'muli', sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
         overflow: hidden;
         margin: 0;
-      }
-      
-      .container {
+}
+.container{
         text-align: center;
-      }
-      
-      .progress-container {
+}
+.progress-container{
         display: flex;
         justify-content: space-between;
         position: relative;
         margin-bottom: 30px;
         max-width: 100%;
         width: 350px;
-      }
+}
 .progress-container::before{
         content: '';
         background-color: var(--lineborder-empty);
@@ -41,5 +38,27 @@
         height: 4px;
         width: 100%;
         z-index: -1;
+}
+.progress{
+        background-color: var(--line-border-fill);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 0%;
+        z-index: -1;
+        transition: 0.4s ease;
+}
+.circle{
+        background-color: #1f1f1f;
+        color: #e2e2e2;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid var(--lineborder-empty);
 }
 
